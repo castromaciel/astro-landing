@@ -1,4 +1,6 @@
 ---
+import '../styles/layout.scss';
+
 interface Props {
   title?: string;
 }
@@ -12,12 +14,15 @@ const { title = 'Astro Landing' } = Astro.props
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astro Landing</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.5.min.css"/>
+    <title>{title}</title>
   </head>
   <body>
-    
-    <slot />
+
+    <main class="mx-auto container pt-10">
+
+      <slot />
+
+    </main>
 
   </body>
 </html>
